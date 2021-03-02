@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Examples</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  
+  font-family: Arial, Helvetica, sans-serif;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.fullcolumn {
+  float: left;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>CSS_EXAMPLES</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+</div>
+
+<div class="topnav">
+  <a href="#basic">Basic Examples</a>
+  <a href="#layout">Layout Examples</a>
+  <a href="#responsive">Responsive examples</a>
+  <a href="#fullcolumn">Contact form examples</a>
+   <a href="../index.html">Back to mainpage</a>
+</div>
+
+<div class="row">
+  <div id="basic" class="column">
+    <h2>Basic CSS examples</h2>
+    <ol>
+        <li><a href="basic/example-02-01.html">example-02-01.html</a> </li>
+        <li><a href="basic/example-02-02.html">example-02-02.html</a></li>
+        <li><a href="basic/example-02-03.html">example-02-03.html</a></li>
+        <li><a href="basic/example-02-04.html">example-02-04.html</a></li>
+        <li><a href="basic/example-02-05.html">example-02-05.html</a></li>
+        <li><a href="basic/example-02-06.html">example-02-06.html</a></li>
+        <li><a href="basic/example-02-07.html">example-02-07.html</a></li>
+        <li><a href="basic/example-02-08.html">example-02-08.html</a></li>
+        <li><a href="basic/example-02-09.html">example-02-09.html</a></li>
+        <li><a href="basic/example-02-10.html">example-02-10.html</a></li>
+        <li><a href="basic/example-02-11.html">example-02-11.html</a></li>
+    </ol>
+
+  </div>
+  
+  <div id="layout" class="column">
+    <h2>Layout CSS examples</h2>
+    <ol>
+        <li><a href="layout/header.html">header.html</a></li>
+        <li><a href="layout/menu.html">menu.html</a></li>
+        <li><a href="layout/content.html">content.html</a></li>
+        <li><a href="layout/content2.html">content2.html</a></li>
+        <li><a href="layout/footer.html">footer.html</a></li>
+        <li><a href="layout/website.html">website.html</a></li>  
+    </ol>
+  </div>
+  <div id="responsive" class="column">
+    <h2>Responsive CSS examples</h2>
+      <ol>
+     <li><a href="responsive/website.html">website.html</a></li>
+        <li><a href="responsive/grid-view1.html">grid-view1.html</a></li>
+        <li><a href="responsive/grid-view2.html">grid-view2.html</a></li>
+        <li><a href="responsive/grid-view-2col.html">grid-view-2col.html</a></li>
+        <li><a href="responsive/mq_ex1.html">mq_ex1.html</a></li>
+        <li><a href="responsive/mq_ex2.html">mq_ex2.html</a></li>
+        <li><a href="responsive/mq_ex3.html">mq_ex3.html</a></li>
+        <li><a href="responsive/mq_ex4.html">mq_ex4.html</a></li>
+        <li><a href="responsive/mq_ex5.html">mq_ex5.html</a></li>
+        <li><a href="responsive/mq_ex6.html">mq_ex6.html</a></li>
+        <li><a href="responsive/image_website.html">image_website.html</a></li>
+        <li><a href="responsive/background-image.html">background-image.html</a></li>
+        <li><a href="responsive/w3-example.html">w3-example.html</a></li>
+        <li><a href="responsive/w3-template.html">w3-template.html</a></li>
+        <li><a href="responsive/bs-example.html">bs-example.html</a></li>
+        <li><a href="responsive/bs-template.html">bs-template.html</a></li>
+    </ol>
+  </div>
+</div>
+<div class="row">
+  <div id="fullcolumn">
+     <h3>Contact Form</h3>
+<form action="#">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+
+</div>
+</div>
+</body>
+</html>
