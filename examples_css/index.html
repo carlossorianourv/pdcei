@@ -4,11 +4,8 @@
 <title>CSS Examples</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-
-* {
-  box-sizing: border-box;
-}
 
 body {
   
@@ -46,26 +43,56 @@ input[type=submit]:hover {
   text-align: center;
 }
 
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-/* Style the topnav links */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
+footer {
+  background-color: darkgrey;
+  padding: 20px;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
 }
 
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+
+.menu-main{
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    border-bottom: 1px solid darkgrey;
+    height: 45px;
+}
+
+.menu-main a{
+    flex: 1;
+    font-family: arial;
+    display: flex;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;    
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-main a:hover{
+    background: white;
+    /*background-color: grey;*/
+    color:black;
+}
+
+.menu-main a.active{
+    background-color: grey;
+}
+
+@media (max-width: 768px) {
+    
+    .menu-main{
+        height: auto;
+        border-bottom: 0px;
+        display: block;
+    }
+    
+    .menu-main a{
+        height: 45px;
+        border-bottom: 1px solid darkgrey;
+    }
+
 }
 
 /* Create three equal columns that floats next to each other */
@@ -73,6 +100,7 @@ input[type=submit]:hover {
   float: left;
   width: 33.33%;
   padding: 15px;
+  box-sizing: border-box;
 }
 
 /* Clear floats after the columns */
@@ -82,25 +110,82 @@ input[type=submit]:hover {
   clear: both;
 }
 
-.fullcolumn {
+.bigcolumn {
   float: left;
-  width: 100%;
+  width: 60%;
   border-radius: 5px;
   background-color: #f2f2f2;
-  padding: 20px;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-bottom:20px;
 }
 
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+.smallcolumn {
+float: left;
+  width: 20%;
+  padding: 15px;
+   box-sizing: border-box;
 }
+
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-rss {
+  background: #ff6600;
+  color: white;
+}
+
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width:600px) {
-  .column {
+  .column, .bigcolumn {
     width: 100%;
   }
+  .smallcolumn {
+    display:none;
+  }
+
 }
 </style>
 </head>
@@ -109,31 +194,33 @@ input[type=submit]:hover {
 <div class="header">
   <h1>CSS_EXAMPLES</h1>
   <p>Resize the browser window to see the responsive effect.</p>
-</div>
-
-<div class="topnav">
-  <a href="#basic">Basic Examples</a>
+  <nav class="menu-main">
+        <a href="#basic">Basic Examples</a>
   <a href="#layout">Layout Examples</a>
   <a href="#responsive">Responsive examples</a>
-  <a href="#fullcolumn">Contact form examples</a>
+  <a href="#contact" class="active">Contact form examples</a>
+    <a href="#footer">Social media buttons</a>
    <a href="../index.html">Back to mainpage</a>
+</nav>
 </div>
+
+
 
 <div class="row">
   <div id="basic" class="column">
     <h2>Basic CSS examples</h2>
     <ol>
-        <li><a href="basic/example-02-01.html">example-02-01.html</a> </li>
-        <li><a href="basic/example-02-02.html">example-02-02.html</a></li>
-        <li><a href="basic/example-02-03.html">example-02-03.html</a></li>
-        <li><a href="basic/example-02-04.html">example-02-04.html</a></li>
-        <li><a href="basic/example-02-05.html">example-02-05.html</a></li>
-        <li><a href="basic/example-02-06.html">example-02-06.html</a></li>
-        <li><a href="basic/example-02-07.html">example-02-07.html</a></li>
-        <li><a href="basic/example-02-08.html">example-02-08.html</a></li>
-        <li><a href="basic/example-02-09.html">example-02-09.html</a></li>
-        <li><a href="basic/example-02-10.html">example-02-10.html</a></li>
-        <li><a href="basic/example-02-11.html">example-02-11.html</a></li>
+        <li><a href="basic/example-02-01.html" target="_blank">example-02-01.html</a> </li>
+        <li><a href="basic/example-02-02.html" target="_blank">example-02-02.html</a></li>
+        <li><a href="basic/example-02-03.html" target="_blank">example-02-03.html</a></li>
+        <li><a href="basic/example-02-04.html" target="_blank">example-02-04.html</a></li>
+        <li><a href="basic/example-02-05.html" target="_blank">example-02-05.html</a></li>
+        <li><a href="basic/example-02-06.html" target="_blank">example-02-06.html</a></li>
+        <li><a href="basic/example-02-07.html" target="_blank">example-02-07.html</a></li>
+        <li><a href="basic/example-02-08.html" target="_blank">example-02-08.html</a></li>
+        <li><a href="basic/example-02-09.html" target="_blank">example-02-09.html</a></li>
+        <li><a href="basic/example-02-10.html" target="_blank">example-02-10.html</a></li>
+        <li><a href="basic/example-02-11.html" target="_blank">example-02-11.html</a></li>
     </ol>
 
   </div>
@@ -141,38 +228,41 @@ input[type=submit]:hover {
   <div id="layout" class="column">
     <h2>Layout CSS examples</h2>
     <ol>
-        <li><a href="layout/header.html">header.html</a></li>
-        <li><a href="layout/menu.html">menu.html</a></li>
-        <li><a href="layout/content.html">content.html</a></li>
-        <li><a href="layout/content2.html">content2.html</a></li>
-        <li><a href="layout/footer.html">footer.html</a></li>
-        <li><a href="layout/website.html">website.html</a></li>  
+        <li><a href="layout/header.html" target="_blank">header.html</a></li>
+        <li><a href="layout/menu.html" target="_blank">menu.html</a></li>
+        <li><a href="layout/content.html" target="_blank">content.html</a></li>
+        <li><a href="layout/content2.html" target="_blank">content2.html</a></li>
+        <li><a href="layout/footer.html" target="_blank">footer.html</a></li>
+        <li><a href="layout/website.html" target="_blank">website.html</a></li>  
     </ol>
   </div>
   <div id="responsive" class="column">
     <h2>Responsive CSS examples</h2>
       <ol>
-     <li><a href="responsive/website.html">website.html</a></li>
-        <li><a href="responsive/grid-view1.html">grid-view1.html</a></li>
-        <li><a href="responsive/grid-view2.html">grid-view2.html</a></li>
-        <li><a href="responsive/grid-view-2col.html">grid-view-2col.html</a></li>
-        <li><a href="responsive/mq_ex1.html">mq_ex1.html</a></li>
-        <li><a href="responsive/mq_ex2.html">mq_ex2.html</a></li>
-        <li><a href="responsive/mq_ex3.html">mq_ex3.html</a></li>
-        <li><a href="responsive/mq_ex4.html">mq_ex4.html</a></li>
-        <li><a href="responsive/mq_ex5.html">mq_ex5.html</a></li>
-        <li><a href="responsive/mq_ex6.html">mq_ex6.html</a></li>
-        <li><a href="responsive/image_website.html">image_website.html</a></li>
-        <li><a href="responsive/background-image.html">background-image.html</a></li>
-        <li><a href="responsive/w3-example.html">w3-example.html</a></li>
-        <li><a href="responsive/w3-template.html">w3-template.html</a></li>
-        <li><a href="responsive/bs-example.html">bs-example.html</a></li>
-        <li><a href="responsive/bs-template.html">bs-template.html</a></li>
+     <li><a href="responsive/website.html" target="_blank">website.html</a></li>
+        <li><a href="responsive/grid-view1.html" target="_blank">grid-view1.html</a></li>
+        <li><a href="responsive/grid-view2.html" target="_blank">grid-view2.html</a></li>
+        <li><a href="responsive/grid-view-2col.html" target="_blank">grid-view-2col.html</a></li>
+        <li><a href="responsive/mq_ex1.html" target="_blank">mq_ex1.html</a></li>
+        <li><a href="responsive/mq_ex2.html" target="_blank">mq_ex2.html</a></li>
+        <li><a href="responsive/mq_ex3.html" target="_blank">mq_ex3.html</a></li>
+        <li><a href="responsive/mq_ex4.html" target="_blank">mq_ex4.html</a></li>
+        <li><a href="responsive/mq_ex5.html" target="_blank">mq_ex5.html</a></li>
+        <li><a href="responsive/mq_ex6.html" target="_blank">mq_ex6.html</a></li>
+        <li><a href="responsive/image_website.html" target="_blank">image_website.html</a></li>
+        <li><a href="responsive/background-image.html" target="_blank">background-image.html</a></li>
+        <li><a href="responsive/w3-example.html" target="_blank">w3-example.html</a></li>
+        <li><a href="responsive/w3-template.html" target="_blank">w3-template.html</a></li>
+        <li><a href="responsive/bs-example.html" target="_blank">bs-example.html</a></li>
+        <li><a href="responsive/bs-template.html" target="_blank">bs-template.html</a></li>
     </ol>
   </div>
 </div>
 <div class="row">
-  <div id="fullcolumn">
+
+<div class="smallcolumn">
+</div>
+  <div id="contact" class="bigcolumn">
      <h3>Contact Form</h3>
 <form action="#">
     <label for="fname">First Name</label>
@@ -195,6 +285,18 @@ input[type=submit]:hover {
   </form>
 
 </div>
+<div class="smallcolumn">
 </div>
+</div>
+<footer id="footer">
+<!-- Add font awesome icons -->
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-rss"></a>
+</footer>
 </body>
 </html>
